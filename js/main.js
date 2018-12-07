@@ -5,7 +5,11 @@
 	var RGBChange = function() {
 	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
 	};	
-		
+
+	/* buttons*/
+	document.getElementById("myButton").onclick = function () {
+		location.href = "";
+};		
 /*scroll to top*/
 
 $(document).ready(function(){
