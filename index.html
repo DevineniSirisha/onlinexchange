@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | E-Shopper</title>
+    <title>Home | OnlineExchange</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -46,6 +46,8 @@
 						<div class="logo pull-left">
 							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
 						</div>
+						<h1> Online Exchange</h1>
+						
 						
 					</div>
 					<div class="col-sm-8">
@@ -92,7 +94,7 @@
 										<li><a href="blog-single.html">Blog Single</a></li>
                                     </ul>
                                 </li> 
-								<li><a href="404.html">404</a></li>
+								<li><a href="Aboutus.html">About Us</a></li> 
 								<li><a href="contact-us.html">Contact</a></li>
 							</ul>
 						</div>
