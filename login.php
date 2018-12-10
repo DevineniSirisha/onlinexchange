@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,14 +150,19 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
-						<form action="#">
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email Address" />
-							<span>
-								<input type="checkbox" class="checkbox"> 
-								Keep me signed in
-							</span>
-							<button id="myButton" class="btn btn-default">Login</button>
+						<form method="post" action="login.php">
+							<?php include('errors.php'); ?>
+							<div class="input-group">
+								<label>Username</label>
+								<input type="text" name="username" >
+							</div>
+							<div class="input-group">
+								<label>Password</label>
+								<input type="password" name="password">
+							</div>
+							<div class="input-group">
+								<button type="submit" class="btn" name="login_user">Login</button>
+							</div>
 						</form>
 					</div><!--/login form-->
 				</div>
@@ -166,11 +172,30 @@
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
-							<button type="submit" class="btn btn-default">Signup</button>
+						<form method="post" action="register.php">
+							<?php include('errors.php'); ?>
+							<div class="input-group">
+							  <label>Username</label>
+							  <input type="text" name="username" value="<?php echo $username; ?>">
+							</div>
+							<div class="input-group">
+							  <label>Email</label>
+							  <input type="email" name="email" value="<?php echo $email; ?>">
+							</div>
+							<div class="input-group">
+							  <label>Password</label>
+							  <input type="password" name="password_1">
+							</div>
+							<div class="input-group">
+							  <label>Confirm password</label>
+							  <input type="password" name="password_2">
+							</div>
+							<div class="input-group">
+							  <button type="submit" class="btn" name="reg_user">Register</button>
+							</div>
+							<p>
+								Already a member? <a href="login.php">Sign in</a>
+							</p>
 						</form>
 					</div><!--/sign up form-->
 				</div>

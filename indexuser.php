@@ -1,3 +1,16 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,19 +55,39 @@
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-2">
 						<div class="logo pull-left">
 							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
 						</div>
 						
-					</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <?php if (isset($_SESSION['success'])) : ?>
+                        <div class="error success" >
+      	            <h3>
+                        <?php 
+          	            echo $_SESSION['success']; 
+          	            unset($_SESSION['success']);
+                         ?>
+      	            </h3>
+                    </div>
+  	                <?php endif ?>
+
+                     <!-- logged in user information -->
+                     <?php  if (isset($_SESSION['username'])) : ?>
+    	            <p>Welcome <strong>
+                        <?php echo $_SESSION['username']; ?>
+                    </strong></p>
+    	            <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+                    <?php endif ?>
+                    </div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                <li><a href="index.html"><i class="fa fa-shopping-cart"></i>Logout</a></li>
 							</ul>
 						</div>
 					</div>
