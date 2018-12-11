@@ -85,8 +85,8 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href="#"><i class="fa fa-user"></i> <?php echo $_SESSION['username']; ?></a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="checkoutuser.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="cartuser.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                 <li><a href="index.php?logout='1'"><i class="fa fa-shopping-cart"></i>Logout</a></li>
 							</ul>
 						</div>
@@ -112,16 +112,16 @@
 								<li><a href="index.php" class="active">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
+                                        <li><a href="shopuser.html">Products</a></li>
 										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html">Checkout</a></li> 
-										<li><a href="cart.html">Cart</a></li> 
+										<li><a href="checkoutuser.html">Checkout</a></li> 
+										<li><a href="cartuser.html">Cart</a></li> 
 										<li><a href="login.html">Login</a></li> 
                                     </ul>
                                 </li> 
 								
 								
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="contact-ususer.html">Contact</a></li>
 							</ul>
 						</div>
 					</div>
