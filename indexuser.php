@@ -78,16 +78,16 @@
     	            <p>Welcome <strong>
                         <?php echo $_SESSION['username']; ?>
                     </strong></p>
-    	            <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+    	           
                     <?php endif ?>
                     </div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="#"><i class="fa fa-user"></i> <?php echo $_SESSION['username']; ?></a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <li><a href="index.html"><i class="fa fa-shopping-cart"></i>Logout</a></li>
+                                <li><a href="index.php?logout='1'"><i class="fa fa-shopping-cart"></i>Logout</a></li>
 							</ul>
 						</div>
 					</div>
